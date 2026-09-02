@@ -1,0 +1,33 @@
+{
+  "default_branch": "develop",
+  "branches": [
+    "develop",
+    "fix/issue-453",
+    "fix/issue-463",
+    "fix/issue-470",
+    "fix/issue-489",
+    "fix/issue-491",
+    "origin",
+    "work-issue-470"
+  ],
+  "parent": {
+    "develop": null,
+    "fix/issue-453": "develop",
+    "fix/issue-463": "develop",
+    "fix/issue-470": "develop",
+    "fix/issue-489": "develop",
+    "fix/issue-491": "develop",
+    "origin": "develop",
+    "work-issue-470": "develop"
+  },
+  "order": [
+    "develop",
+    "fix/issue-453",
+    "fix/issue-463",
+    "fix/issue-470",
+    "fix/issue-489",
+    "fix/issue-491",
+    "origin",
+    "work-issue-470"
+  ]
+}

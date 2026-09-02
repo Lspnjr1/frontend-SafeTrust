@@ -6,7 +6,6 @@ import { STUB_HOTELS } from "@/lib/mockData/hotels";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import { BsSortDownAlt } from "react-icons/bs";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Lightbulb, SlidersHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -294,4 +293,3 @@ export default function HotelListingPage() {
     </div>
   );
 }
-
