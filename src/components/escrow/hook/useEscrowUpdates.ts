@@ -1,10 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  checkPendingNotifications,
-  checkMilestoneUpdates,
-  checkDisputeNotifications,
-} from "@/core/config/axios/notifications";
 
 type EscrowStatus =
   | "pending"
@@ -21,9 +16,15 @@ export const useEscrowUpdates = (escrowId: string) => {
 
     const fetchUpdates = async () => {
       try {
-        const pending = await checkPendingNotifications(escrowId);
-        const milestones = await checkMilestoneUpdates(escrowId);
-        const disputes = await checkDisputeNotifications(escrowId);
+        const request = (kind: string) =>
+          fetch(`/api/notifications/${kind}/${encodeURIComponent(escrowId)}`).then(response =>
+            response.ok ? response.json() : []
+          );
+        const [pending, milestones, disputes] = await Promise.all([
+          request("pending"),
+          request("milestones"),
+          request("disputes"),
+        ]);
 
         if (!active) return;
 
