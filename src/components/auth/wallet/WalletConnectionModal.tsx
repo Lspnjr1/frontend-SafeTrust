@@ -12,7 +12,7 @@ import {
   ETHEREUM_WALLETS,
   POPULAR_WALLETS,
 } from "./utils/walletConfig";
-import { WalletInfo, WalletType } from "./types/wallet.types";
+import type { WalletInfo, WalletType } from "@/types/wallet";
 
 interface WalletConnectionModalProps {
   isOpen: boolean;

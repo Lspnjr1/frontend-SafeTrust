@@ -90,7 +90,7 @@ export default function ResetPasswordForm({
 
       <Button
         type="submit"
-        className="w-full bg-[#2857B8] hover:bg-[#2857B8]/90"
+        className="w-full"
         disabled={status === "loading" || !isValidToken}
       >
         {status === "loading" ? (
@@ -104,7 +104,7 @@ export default function ResetPasswordForm({
       </Button>
 
       <div className="text-sm">
-        <Link href="/login" className="text-[#2857B8] hover:underline">
+        <Link href="/login" className="text-primary hover:underline">
           Back to Login
         </Link>
       </div>

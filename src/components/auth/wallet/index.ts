@@ -15,7 +15,7 @@ export { default as WalletDetection } from './WalletDetection';
 export { default as ConnectionStatus } from './ConnectionStatus';
 
 // Types
-export type * from './types/wallet.types';
+export type * from '@/types/wallet';
 
 // Utils
 export {

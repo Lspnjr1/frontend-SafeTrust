@@ -7,6 +7,17 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "api.qrserver.com" },
     ],
   },
+  async rewrites() {
+    const projectId =
+      process.env.FIREBASE_PROJECT_ID ||
+      process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+    return [
+      {
+        source: "/__/auth/:path*",
+        destination: `https://${projectId}.firebaseapp.com/__/auth/:path*`,
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/dashboard/hotel", destination: "/hotels", permanent: true },
